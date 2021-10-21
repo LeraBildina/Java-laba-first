@@ -1,7 +1,7 @@
 package customlist;
 /**
  *
- * @author ilya-
+ * @author lera
  * @param <TypeOfData> Universal Type of data
  */
 
@@ -63,9 +63,9 @@ public class LinkedList<TypeOfData> {
         if(index > size) {
             throw new Exception("Выход за границы списка");
         }
-        if(index == size){
+        if(index == 0){
             pushBack(data);
-        } else if(index == 0){
+        } else if(index == size){
             pushFront(data);
         } else {
             int step = 0;
@@ -117,9 +117,9 @@ public class LinkedList<TypeOfData> {
         if(index >= size) {
             throw new Exception("Выход за границы списка");
         }
-        if(index == 0){
+        if(index == size -1){
             popFront();
-        } else if( index == size-1){
+        } else if( index == 0){
             popBack();
         } else {
             Node<TypeOfData> temp = head;
